@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #F4F4FB;
+}
+
+h2 {
+    font: 18px;
+    padding: 15px 0;
+}
+
+h2>span {
+    font-size: 14px
+}
+
+/* ------------------------- */
+
+.navbar-top {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    z-index: 2;
+    padding-left: 4rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-top-logo {
+    font-family: 'Mistral', cursive;
+    font-weight: bold;
+    font-size: 25px;
+    color: #248BD6;
+    text-decoration: none;
+    margin: 0;
+}
+
+.profile {
+    display: flex;
+    width: 32%;
+    max-width: 200px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.profile-image {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.profile-name {
+    font-size: 0.9rem;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.side-toggle {
+    position: fixed;
+    z-index: 2;
+    top: 14px;
+    left: 20px;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#toggle {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    left: 0;
+    top: 0;
+    padding: 80px 0 20px 0;
+    color: #FFF;
+    background-color: #248BD6;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-menu {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #FFF;
+    padding: 15px 20px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar-menu-logout {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar-menu>span {
+    font-size: 25px;
+    padding-right: 20px;
+}
+
+.sidebar-menu-logout>span {
+    font-size: 25px;
+    padding-right: 13px;
+}
+
+.sidebar-menu>p {
+    margin: 0;
+}
+
+.sidebar-menu:hover {
+    color: #248BD6;
+    background-color: #FFF;
+}
+
+.sidebar-menu:active {
+    color: #248BD6;
+    background-color: #FFF;
+}
+
+.sidebar-menu-logout:hover {
+    color: #1100ff;
+    background-color: #248BD6;
+}
+
+#toggle:checked~.sidebar {
+    width: 70px;
+}
+
+#toggle:checked~.sidebar .sidebar-menu>p {
+    display: none
+}
+
+
+#toggle:checked~main {
+    padding: 5rem 1rem 2rem 6rem;
+}
+
+main {
+    min-height: 100%;
+    padding: 5rem 1rem 2rem 14rem;
+    color: #201F2B;
+}
+
+.dashboard-container {
+    display: grid;
+    padding-bottom: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    grid-template-areas:
+        "total1 total2 total3 total4"
+}
+
+.dashboard-container-sanpham {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    grid-template-areas:
+        "detail detail detail detail";
+}
+
+.card {
+    background-color: #FFF;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.detail {
+    grid-area: detail;
+    overflow-x: auto;
+}
+
+.customer {
+    grid-area: customer;
+    overflow-x: auto;
+}
+
+.info {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-detail h2 {
+    font-size: 24px;
+}
+
+.info-detail p {
+    font-size: 14px;
+}
+
+.info-image {
+    font-size: 50px;
+    color: #FFF
+}
+
+.detail-header {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-header {
+    width: 100px;
+    height: 40px;
+    background-color: #248BD6;
+    color: #FFF;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.button-header:hover {
+    background-color: #246bd6;
+    cursor: pointer;
+}
+
+.detail table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.detail table tr:nth-child(odd) {
+    background-color: #F8F8FB;
+}
+
+.detail table th {
+    background-color: #F4F4FB;
+}
+
+.detail table th,
+.detail table td {
+    padding: 0.8rem 0.2rem;
+    text-align: left;
+    min-width: 120px;
+    font-size: 14px;
+}
+
+.detail table tr:hover {
+    background-color: #F2F2F2;
+    border-bottom: 2px soid #248BD6;
+}
+
+.img-shoe {
+    width: 40px;
+    height: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.edit-icon {
+    font-size: 20px;
+    text-align: center;
+    color: blue;
+    margin-right: 3px;
+}
+
+.edit-icon:hover {
+    color: rgba(85, 85, 255, 0.8);
+}
+
+.delete-icon {
+    font-size: 20px;
+    text-align: center;
+    color: red;
+    margin-left: 3px;
+}
+
+.delete-icon:hover {
+    color: rgba(255, 39, 39, 0.8);
+}
+
+.status {
+    padding: 0.3rem 1rem;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 1;
+    font-size: 0.7rem;
+}
+
+.onprogress {
+    background-color: #FFF2D7;
+    color: #FFA705;
+}
+
+.confirmed {
+    background-color: #D7EFFC;
+    color: #15A1FE;
+}
+
+.fulfilled {
+    background-color: #DCEDDE;
+    color: #37AA38;
+}
+
+.customer-wrapper {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 0.4fr;
+    grid-auto-flow: column;
+    margin: 20px 0;
+    min-width: 230px;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.customer-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.customer-name>p,
+.customer-date {
+    font-size: 0.9rem;
+}
+
+.customer-date {
+    text-align: right;
+    color: #9092a9;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 980px) {
+    .dashboard-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "total1 total2"
+            "total3 total4"
+            "detail detail"
+            "customer customer";
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-name {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    main {
+        padding: 5rem 2rem 2rem 2rem;
+    }
+
+    #toggle:checked~.sidebar {
+        width: 200px;
+        display: block;
+    }
+
+    #toggle:checked~.sidebar .sidebar-menu>p {
+        display: block;
+    }
+
+    #toggle:checked~main {
+        padding: 5rem 2rem 2rem 2rem;
+    }
+
+    .dashboard-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "total1"
+            "total2"
+            "total3"
+            "total4"
+            "detail"
+            "customer";
+    }
+
+    .detail table {
+        font-size: 0.9rem;
+    }
+}

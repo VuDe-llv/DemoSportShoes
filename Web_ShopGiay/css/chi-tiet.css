@@ -1,0 +1,254 @@
+.navbar-chitiet {
+    padding-top: 30px;
+}
+
+.container-chitiet {
+    border-top: 2px solid #0066ff;
+}
+/* Chi ti?t s?n ph?m */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.flex-box{
+    display: flex;
+    width: 1000px;
+    margin: 20px auto;
+}
+
+.left{
+    width: 30%;
+    padding-top: 50px;
+    padding-right: 40px;
+}
+
+.big-img{
+    width: 250px;
+}
+
+.big-img img{
+    width: inherit;
+}
+
+.images{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.small-img{
+    width: 50px;
+    overflow: hidden;
+    border: 1.5px solid black;
+}
+
+.small-img img{
+    width: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.small-img:hover img{
+    transform: scale(1.2);
+}
+
+.url{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(0, 102, 255);
+}
+
+.pname{
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.nhacungcap {
+    display: flex;
+    font-weight: 500;
+}
+
+.ten-nhacc{
+    margin-left: 5px;
+}
+
+.ratings i{
+    color: rgb(255, 136, 0);
+}
+
+.price{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px 0;
+    color: #ff0000;
+}
+
+.size{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.size p{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.psize{
+    width: 40px;
+    height: 30px;
+    border: 1px solid #ff5e00;
+    color: #000;
+    text-align: center;
+    align-items: center;
+    margin: 0 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.psize.active{
+    border-width: 1.5px;
+    color: #ff5e00;
+    font-weight: 500;
+}
+
+.quantity{
+    display: flex;
+}
+
+.quantity p{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.quantity input{
+    width: 40px;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.btn-box{
+    display: flex;
+    margin-top: 40px;
+}
+
+.btn-box button{
+    font-size: 18px;
+    padding: 8px 25px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+}
+
+.cart-btn{
+    background-color: #ff5e00;
+    margin-right: 20px;
+}
+
+.buy-btn{
+    background-color: #00aeff;
+}
+
+.cart-btn:hover{
+    background-color: #ff3c00;
+}
+
+.buy-btn:hover{
+    background-color: #0066ff;
+}
+
+.col-12-sanpham {
+    padding: 10px 0;
+}
+
+.img-shoe-sp {
+    width: 160px;
+    height: 160px;
+}
+
+/* Khung s?n ph?m */
+.all-product-list-title {
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    margin: 5px 20px;
+    align-items: center;
+}
+
+.product-sp {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-sp-item {
+    position: relative;
+    height: 300px;
+    flex: 1;
+    margin: 10px;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-sp-item:hover {
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px #3e92ff;
+    margin-top: 5px;
+}
+
+.product-sp-item a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.product-sp-item__title{
+    margin: 10px -10px;
+}
+
+.product-sp-TC-item__title{
+    margin: 10px 0;
+}
+
+.product-sp-item__title:hover{
+    color: #0F6BAE;
+}
+
+.product-sp-item__price {
+    position: absolute;
+    margin-bottom: 9px;
+    bottom: 2px;
+    right: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FF5733;
+}
+
+.pagination {
+    justify-content: center;
+    padding: 50px 0;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    right: 300px;
+}
